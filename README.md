@@ -1,1 +1,1 @@
-# Huskify-Music-Web-back-end
+# web-dev-2023-team7-backend
