@@ -23,7 +23,10 @@ app.use(
 );
 
 app.use(express.json());
-mongoose.connect('mongodb://127.0.0.1:27017/music');
+
+const CONNECTION_STRING = process.env.DB_CONNECTION_STRING || 'mongodb+srv://gouqinglin:342463221883@cluster0.tsdhoq6.mongodb.net/?retryWrites=true&w=majority npm,';
+mongoose.connect(CONNECTION_STRING);
+
 AuthController(app);
 LikesController(app);
 CommentsController(app);
